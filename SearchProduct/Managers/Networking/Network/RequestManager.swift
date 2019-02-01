@@ -9,18 +9,19 @@
 
 import Moya
 import SwiftyJSON
+import Moya
 
 typealias RequestCompletion = (JSON, JSON) -> Void
 typealias RequestFailure = (ResponseError) -> Void
 
-open class RequestManager<Provider: TargetType>: NSObject {
+ class RequestManager: NSObject {
     
-    var provider = MoyaProvider<Provider>(plugins: [])
+    var provider = MoyaProvider<RestApi>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
     
     var requestHandlerCompletion: RequestCompletion = { _,_  in }
     var requestHandlerFailure: RequestFailure = { _ in }
     
-    func buildRequest(target: Provider,
+    func buildRequest(target: RestApi,
                       requestHandlerCompletion: @escaping RequestCompletion,
                       requestHandlerFailure: @escaping RequestFailure) -> Cancellable {
         
@@ -35,7 +36,7 @@ open class RequestManager<Provider: TargetType>: NSObject {
         }
     }
     
-    func requestCancellable(target: Provider,
+    func requestCancellable(target: RestApi,
                             requestHandlerCompletion: @escaping RequestCompletion,
                             requestHandlerFailure: @escaping RequestFailure) -> Cancellable {
         
@@ -44,7 +45,7 @@ open class RequestManager<Provider: TargetType>: NSObject {
                             requestHandlerFailure: requestHandlerFailure)
     }
     
-    func request(target: Provider,
+    func request(target: RestApi,
                  requestHandlerCompletion: @escaping RequestCompletion,
                  requestHandlerFailure: @escaping RequestFailure) {
         
@@ -53,4 +54,15 @@ open class RequestManager<Provider: TargetType>: NSObject {
                              requestHandlerFailure: requestHandlerFailure)
     }
     
+    
+}
+
+func JSONResponseDataFormatter(_ data: Data) -> Data {
+    do {
+        let dataAsJSON = try JSONSerialization.jsonObject(with: data)
+        let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
+        return prettyData
+    } catch {
+        return data // fallback to original data if it can't be serialized.
+    }
 }

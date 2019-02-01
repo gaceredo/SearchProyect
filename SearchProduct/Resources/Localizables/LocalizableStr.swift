@@ -11,6 +11,7 @@ import Foundation
 enum LocalizableStrings {
     
     enum Errors: String, Localizable {
+        
         case titleBadRequest = "TitleBadRequest"
         case titleUnauthorized = "TitleUnauthorized"
         case titleForbidden = "TitleForbidden"
@@ -36,36 +37,6 @@ enum LocalizableStrings {
         case descriptionServiceUnavailable = "DescriptionServiceUnavailable"
         case descriptionserviceUnavailable520 = "DescriptionserviceUnavailable520"
         case descriptionGenericError = "DescriptionGenericError"
-    }
-    
-    enum Placeholders: String, Localizable {
-        case titleEmptyPlaceholder = "titleEmptyPlaceholder"
-        case descriptionEmptyPlaceholder = "descriptionEmptyPlaceholder"
-        case buttonEmptyPlaceholder = "buttonEmptyPlaceholder"
-        case titleNoSearchResultsPlaceholder = "titleNoSearchResultsPlaceholder"
-        case descriptionNoSearchResultsPlaceholder = "descriptionNoSearchResultsPlaceholder"
-        case buttonNoSearchResultsPlaceholder = "buttonNoSearchResultsPlaceholder"
-    }
-    
-    enum MovieScreen: String, Localizable {
-        case titleScreen = "titleMovieScreen"
-        case settingsScreen = "settingsScreen"
-    }
-    
-    enum SearchScreen: String, Localizable {
-        case titleScreen = "titleMovieSearchScreen"
-    }
-    
-    enum PageError: String, Localizable {
-        case titlePageError = "titlePageError"
-        case messagePageError = "messagePageError"
-        case titleButtonPageError = "titleButtonPageError"
-    }
-    
-    enum ImageServiceAlert: String, Localizable {
-        case titleError = "titleImageService"
-        case messageError = "messageImageService"
-        case CancelButtonError = "CancelImageService"
     }
     
 }

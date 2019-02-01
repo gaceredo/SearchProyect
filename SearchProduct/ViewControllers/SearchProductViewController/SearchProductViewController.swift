@@ -1,5 +1,5 @@
 //
-//  ProductsViewController.swift
+//  SearchProductViewController.swift
 //  SearchProduct
 //
 //  Created by Luis Aceredo on 2/1/19.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class SearchProductViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
     }
 
 

@@ -13,6 +13,8 @@ import SwiftyJSON
 import Result
 
 struct Network {
+    
+
     static func requestResult(target : TargetType,
                               _ result : Result<Moya.Response, MoyaError>,
                               _ successCallback : @escaping RequestCompletion,
