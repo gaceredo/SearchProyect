@@ -18,7 +18,7 @@ extension UINavigationBar {
     
     @objc class func genericBarColor() {
         UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().barTintColor = UIColor.black
+        UINavigationBar.appearance().barTintColor = UIColor.lightGray
     }
     
 }
