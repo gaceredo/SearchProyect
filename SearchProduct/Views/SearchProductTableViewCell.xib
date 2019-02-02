@@ -50,8 +50,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="qt3-cK-BQF" firstAttribute="top" secondItem="CdS-5P-psi" secondAttribute="top" id="2e8-0q-qbR"/>
+                                    <constraint firstItem="Ps8-5r-mzr" firstAttribute="leading" secondItem="CdS-5P-psi" secondAttribute="leading" id="41k-ob-7jL"/>
                                     <constraint firstAttribute="trailing" secondItem="qt3-cK-BQF" secondAttribute="trailing" id="DsS-dm-U7H"/>
+                                    <constraint firstItem="Ps8-5r-mzr" firstAttribute="top" secondItem="qt3-cK-BQF" secondAttribute="bottom" constant="3" id="F5e-8L-KLQ"/>
                                     <constraint firstItem="qt3-cK-BQF" firstAttribute="leading" secondItem="CdS-5P-psi" secondAttribute="leading" id="Hko-6d-o0i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ps8-5r-mzr" secondAttribute="trailing" id="YXo-zz-Sf1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ps8-5r-mzr" secondAttribute="bottom" id="lZY-bt-ca3"/>
                                 </constraints>
                             </stackView>
                         </subviews>

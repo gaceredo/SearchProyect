@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchProductViewController" customModule="SearchProduct" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="XTf-6O-vba" id="gkx-fT-xcr"/>
+                <outlet property="tableView" destination="3jW-MK-xYz" id="Stb-aI-gMV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

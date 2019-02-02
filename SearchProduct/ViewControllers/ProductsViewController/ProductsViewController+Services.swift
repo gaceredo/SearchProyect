@@ -10,11 +10,5 @@ import Foundation
 
 extension ProductsViewController{
     
-    func service()  {
-        SearchProductManager.shared.getNewsFeedCategory(parameters: ["q":"iphone 6"], success: { (response) in
-            print(response)
-        }) { (error) in
-            
-        }
-    }
+
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Alamofire
 
-class SearchProductTableViewCell: UITableViewCell {
+class SearchProductTableViewCell: UITableViewCell, ReusableCell {
 
     @IBOutlet weak var titleProduct: UILabel!
     @IBOutlet weak var descriptionsProduct: UILabel!
@@ -21,8 +22,14 @@ class SearchProductTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleProduct.text = nil
+        imageProduct.image = nil
+        descriptionsProduct.text = nil
     }
     
 }

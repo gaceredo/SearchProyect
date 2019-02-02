@@ -8,14 +8,37 @@
 
 import UIKit
 
-class SearchProductViewController: UIViewController {
-
+class SearchProductViewController: UIViewController,SearchProductDelegate {
+   
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var viewModel: SearchProductViewModel = SearchProductViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
+        setupSearch()
+        viewModel.delegate = self
     }
 
+    func setupTableView()  {
+        tableView.registerNib(SearchProductTableViewCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.delegate = viewModel
+        tableView.dataSource = viewModel
+        tableView.keyboardDismissMode = .onDrag
+        tableView.tableFooterView = UIView()
+    }
 
+    func response(isValid: Bool) {
+        if !isValid {
+            //inser view not result
+        }
+    }
+    
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
 
 }

@@ -12,9 +12,7 @@ class ProductsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupNavigationBar()
-        self.service()
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
