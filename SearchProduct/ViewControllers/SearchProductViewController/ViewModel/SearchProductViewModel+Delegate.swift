@@ -25,10 +25,14 @@ extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
     func searchCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchProductTableViewCell.xibName, for: indexPath) as! SearchProductTableViewCell
-         let index = results[indexPath.row]
+        let index = results[indexPath.row]
         
         cell.titleProduct.text = index.title
-        cell.descriptionsProduct.text = index.title
+        
+        if let currencyId = index.currencyId, let price = index.price{
+            cell.descriptionsProduct.text = "\(currencyId == isDolar ? "U$S" : "$") \(price.description)"
+        }
+        cell.setImage(urlImage: index.thumbnail!)
        
         return cell
     }

@@ -6,6 +6,7 @@ target 'SearchProduct' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'Moya'
- 
+    pod 'SVProgressHUD'
+    pod 'Kingfisher'
 
 end

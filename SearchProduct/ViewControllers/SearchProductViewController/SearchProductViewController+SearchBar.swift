@@ -14,13 +14,14 @@ extension SearchProductViewController {
     func setupSearch() {
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
-        searchBar.barStyle = .black
+        searchBar.barStyle = .default
     }
 }
 
 extension SearchProductViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.showHUD()
         viewModel.searchText = searchText
         viewModel.reload()
     }

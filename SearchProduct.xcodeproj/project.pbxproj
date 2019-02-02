@@ -37,6 +37,8 @@
 		712510802205099300341266 /* DateFormatter+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125107F2205099300341266 /* DateFormatter+Creation.swift */; };
 		7125108322050B8600341266 /* SearchProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125108222050B8600341266 /* SearchProductModel.swift */; };
 		7125108522051A7C00341266 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125108422051A7C00341266 /* Utilities.swift */; };
+		71257C7A220633DE00030669 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71257C79220633DE00030669 /* UIViewController+HUD.swift */; };
+		71257C7C2206467600030669 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71257C7B2206467600030669 /* Constants.swift */; };
 		712CB13B220612D700654956 /* SearchProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13A220612D700654956 /* SearchProductViewModel.swift */; };
 		712CB13E2206131E00654956 /* SearchProductViewModel+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13D2206131E00654956 /* SearchProductViewModel+Delegate.swift */; };
 		712CB14022061A5600654956 /* SearchProductViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */; };
@@ -87,6 +89,8 @@
 		7125107F2205099300341266 /* DateFormatter+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Creation.swift"; sourceTree = "<group>"; };
 		7125108222050B8600341266 /* SearchProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductModel.swift; sourceTree = "<group>"; };
 		7125108422051A7C00341266 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		71257C79220633DE00030669 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		71257C7B2206467600030669 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		712CB13A220612D700654956 /* SearchProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductViewModel.swift; sourceTree = "<group>"; };
 		712CB13D2206131E00654956 /* SearchProductViewModel+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchProductViewModel+Delegate.swift"; sourceTree = "<group>"; };
 		712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchProductViewController+SearchBar.swift"; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		7125102B2203B94C00341266 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				71257C7B2206467600030669 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				7125107D2205094900341266 /* Mappable.swift */,
 				7125107F2205099300341266 /* DateFormatter+Creation.swift */,
 				7125108422051A7C00341266 /* Utilities.swift */,
+				71257C79220633DE00030669 /* UIViewController+HUD.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -493,15 +499,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +559,7 @@
 				7187974E2205366D003E5239 /* ReviewsModel.swift in Sources */,
 				71251065220494CA00341266 /* SearchProductViewController.swift in Sources */,
 				712CB13E2206131E00654956 /* SearchProductViewModel+Delegate.swift in Sources */,
+				71257C7C2206467600030669 /* Constants.swift in Sources */,
 				7187974322053485003E5239 /* SellerModel.swift in Sources */,
 				7125106A2204997100341266 /* ProductsViewController+NavigatorBar.swift in Sources */,
 				71879747220534BC003E5239 /* AddressModel.swift in Sources */,
@@ -570,6 +581,7 @@
 				7187975022053684003E5239 /* ResultModel.swift in Sources */,
 				712510352203BDCF00341266 /* UINavigationBar+Extension.swift in Sources */,
 				7125108522051A7C00341266 /* Utilities.swift in Sources */,
+				71257C7A220633DE00030669 /* UIViewController+HUD.swift in Sources */,
 				712510552204842800341266 /* ResponseCode.swift in Sources */,
 				718797522205369F003E5239 /* SortModel.swift in Sources */,
 			);

@@ -38,6 +38,7 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
     }
     
     func reloadTableView() {
+        self.hideHUD()
         self.tableView.reloadData()
     }
 

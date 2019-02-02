@@ -22,10 +22,13 @@ class SearchProductViewModel:NSObject {
     
     func callSearchProductManager()  {
         SearchProductManager.shared.getNewsFeedCategory(parameters: ["q":searchText], success: { [weak self] (response) in
-            if let result = response.results{
-                self?.results = result
-                self?.delegate?.reloadTableView()
+            
+            guard let result = response.results else {
+                return
             }
+            self?.results = result
+            self?.delegate?.reloadTableView()
+            
             self?.delegate?.response(isValid: true)
         }) { [weak self] (error) in
             self?.delegate?.response(isValid: false)
