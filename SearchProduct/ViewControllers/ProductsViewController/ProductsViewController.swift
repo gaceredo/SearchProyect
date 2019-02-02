@@ -14,7 +14,6 @@ class ProductsViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         service()
-
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -22,8 +21,8 @@ class ProductsViewController: UIViewController {
     }
     
     func service()  {
-        PYNewsFeedCategoryManager.shared.getNewsFeedCategory(success: { (response) in
-            
+        SearchProductManager.shared.getNewsFeedCategory(parameters: ["q":"iphone 6"], success: { (response) in
+            print(response)
         }) { (error) in
             
         }
@@ -31,19 +30,21 @@ class ProductsViewController: UIViewController {
 
 }
 
-class PYNewsFeedCategoryManager {
+class SearchProductManager {
     
-   static let shared: PYNewsFeedCategoryManager = PYNewsFeedCategoryManager()
+   static let shared: SearchProductManager = SearchProductManager()
     
-    func getNewsFeedCategory(success:@escaping ([String:Any]?) -> Void,
+    func getNewsFeedCategory(parameters:[String:String],
+                             success:@escaping (SearchProductModel) -> Void,
                              failure:@escaping (Error) -> Void) {
-        RequestManager().request(target: .searchProduct(withParameters: ["q":"testing"]), requestHandlerCompletion: { (services , Response) in
-            print(services)
-            print(Response)
-            success(services.dictionaryObject)
+        RequestManager().request(target: .searchProduct(withParameters: parameters), requestHandlerCompletion: { ( response) in
             
-        }) { (erro) in
-            print(erro)
+            if let items = SearchProductModel(jsonString: response.description){
+               success(items)
+            }
+            
+        }) { (error) in
+            failure(error)
         }
    }
     

@@ -26,13 +26,10 @@ struct Network {
                 return
             }
             
-            let httpResponse = resultData.response?.allHeaderFields
-            
             if responseCode.isSuccess() {
                 do {
                     let responseDataJson = try JSON(data: resultData.data)
-                    let headerJson = JSON(httpResponse ?? [:])
-                    successCallback(headerJson, responseDataJson)
+                    successCallback(responseDataJson)
                 } catch {
                     failureCallback(ResponseHandlingError.handlingGenericError())
                 }

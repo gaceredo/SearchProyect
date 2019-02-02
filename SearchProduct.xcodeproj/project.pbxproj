@@ -33,6 +33,10 @@
 		7125106E2204D84100341266 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125106D2204D84100341266 /* RestApi.swift */; };
 		712510712204DC0B00341266 /* RoutersURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712510702204DC0B00341266 /* RoutersURLs.swift */; };
 		712510732204DC8B00341266 /* RouterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712510722204DC8B00341266 /* RouterBase.swift */; };
+		7125107E2205094900341266 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125107D2205094900341266 /* Mappable.swift */; };
+		712510802205099300341266 /* DateFormatter+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125107F2205099300341266 /* DateFormatter+Creation.swift */; };
+		7125108322050B8600341266 /* SearchProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125108222050B8600341266 /* SearchProductModel.swift */; };
+		7125108522051A7C00341266 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125108422051A7C00341266 /* Utilities.swift */; };
 		F07D590710F9E0731397B4CA /* Pods_SearchProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFDAFC76AFC7852F6EE30DA /* Pods_SearchProduct.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,10 @@
 		7125106D2204D84100341266 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		712510702204DC0B00341266 /* RoutersURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutersURLs.swift; sourceTree = "<group>"; };
 		712510722204DC8B00341266 /* RouterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBase.swift; sourceTree = "<group>"; };
+		7125107D2205094900341266 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		7125107F2205099300341266 /* DateFormatter+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Creation.swift"; sourceTree = "<group>"; };
+		7125108222050B8600341266 /* SearchProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductModel.swift; sourceTree = "<group>"; };
+		7125108422051A7C00341266 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8CFDAFC76AFC7852F6EE30DA /* Pods_SearchProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75BCF59B2CAD38B6578252E /* Pods-SearchProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchProduct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		C72354B6D50925D3F379FADC /* Pods-SearchProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchProduct.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 		712510122203B78E00341266 /* SearchProduct */ = {
 			isa = PBXGroup;
 			children = (
+				7125108122050B5700341266 /* Model */,
 				7125105E22048D6900341266 /* Extension */,
 				7125102F2203B99C00341266 /* Views */,
 				7125102E2203B99100341266 /* Utilities */,
@@ -176,6 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				7125105C22048CAF00341266 /* CustomNavigation.swift */,
+				7125107D2205094900341266 /* Mappable.swift */,
+				7125107F2205099300341266 /* DateFormatter+Creation.swift */,
+				7125108422051A7C00341266 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -326,6 +338,14 @@
 			path = Resquest;
 			sourceTree = "<group>";
 		};
+		7125108122050B5700341266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7125108222050B8600341266 /* SearchProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AD103B125789978FD3D6A095 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,10 +489,12 @@
 				7125105A22048C4600341266 /* ProductsViewController.swift in Sources */,
 				7125103D2203BEB000341266 /* ReusableCell.swift in Sources */,
 				7125105D22048CAF00341266 /* CustomNavigation.swift in Sources */,
+				712510802205099300341266 /* DateFormatter+Creation.swift in Sources */,
 				7125106C22049D3700341266 /* ProductViewController+ Transitions.swift in Sources */,
 				7125106E2204D84100341266 /* RestApi.swift in Sources */,
 				71251065220494CA00341266 /* SearchProductViewController.swift in Sources */,
 				7125106A2204997100341266 /* ProductsViewController+NavigatorBar.swift in Sources */,
+				7125108322050B8600341266 /* SearchProductModel.swift in Sources */,
 				712510712204DC0B00341266 /* RoutersURLs.swift in Sources */,
 				7125104922047BBE00341266 /* ResponseError.swift in Sources */,
 				7125104622047B6B00341266 /* RequestManager.swift in Sources */,
@@ -482,7 +504,9 @@
 				712510732204DC8B00341266 /* RouterBase.swift in Sources */,
 				712510382203BE1E00341266 /* UITableView+Register.swift in Sources */,
 				7125104422047B2400341266 /* Network.swift in Sources */,
+				7125107E2205094900341266 /* Mappable.swift in Sources */,
 				712510352203BDCF00341266 /* UINavigationBar+Extension.swift in Sources */,
+				7125108522051A7C00341266 /* Utilities.swift in Sources */,
 				712510552204842800341266 /* ResponseCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
