@@ -10,3 +10,4 @@ import Foundation
 import UIKit
 
 var isDolar = "USD"
+var available = "Disponibles"

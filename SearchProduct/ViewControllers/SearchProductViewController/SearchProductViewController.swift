@@ -22,8 +22,8 @@ class SearchProductViewController: UIViewController,SearchProductDelegate,EmptyR
         setupTableView()
         setupSearch()
         viewModel.delegate = self
-       
     }
+    
     override func viewWillAppear(_ animated: Bool) {
          title = LocalizableStrings.Search.titleSearchScreen.localized
     }
@@ -45,14 +45,12 @@ class SearchProductViewController: UIViewController,SearchProductDelegate,EmptyR
     }
     
     func insertViewEmptySearch() {
-        if (self.emptyResultSearch == nil) {
             self.emptyResultSearch = EmptyResultSearch.loadFirstViewFromNib()
             if let emptyResultSearch = self.emptyResultSearch {
                 emptyResultSearch.delegate = self
                 self.view.addSubview(emptyResultSearch)
                 emptyResultSearch.insetsZeroToSuperview()
             }
-        }
     }
     
     func reloadTableView() {

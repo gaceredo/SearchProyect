@@ -28,33 +28,49 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qa-CZ-6bH">
-                    <rect key="frame" x="0.0" y="213.5" width="375" height="240"/>
+                    <rect key="frame" x="0.0" y="229.5" width="375" height="208.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No se enontraron Resultados" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vyg-pP-65c">
-                            <rect key="frame" x="20" y="190" width="335" height="35"/>
+                            <rect key="frame" x="20" y="173" width="335" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-MJ-6b1">
-                            <rect key="frame" x="88" y="8" width="199" height="167"/>
+                            <rect key="frame" x="88" y="8" width="199" height="150"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="GbF-MJ-6b1" secondAttribute="height" multiplier="199:167" id="KoQ-ha-oNQ"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="4nA-iO-5C3">
+                                    <variation key="heightClass=compact-widthClass=compact" constant="120"/>
+                                </constraint>
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="GbF-MJ-6b1" firstAttribute="top" secondItem="0qa-CZ-6bH" secondAttribute="top" constant="8" id="23q-OU-ha4"/>
                         <constraint firstAttribute="trailing" secondItem="Vyg-pP-65c" secondAttribute="trailing" constant="20" id="2Rv-0j-4xP"/>
                         <constraint firstItem="GbF-MJ-6b1" firstAttribute="centerX" secondItem="0qa-CZ-6bH" secondAttribute="centerX" id="3pe-Je-Aob"/>
-                        <constraint firstAttribute="width" secondItem="0qa-CZ-6bH" secondAttribute="height" multiplier="383:245" id="AmY-ug-yk9"/>
                         <constraint firstItem="Vyg-pP-65c" firstAttribute="leading" secondItem="0qa-CZ-6bH" secondAttribute="leading" constant="20" id="Fd0-63-IaX"/>
                         <constraint firstItem="GbF-MJ-6b1" firstAttribute="leading" secondItem="0qa-CZ-6bH" secondAttribute="leading" constant="88" id="Imc-dw-4c6"/>
-                        <constraint firstAttribute="bottom" secondItem="Vyg-pP-65c" secondAttribute="bottom" constant="15" id="Qoy-fN-mij"/>
+                        <constraint firstAttribute="bottom" secondItem="Vyg-pP-65c" secondAttribute="bottom" constant="15" id="Qoy-fN-mij">
+                            <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                        </constraint>
                         <constraint firstAttribute="trailing" secondItem="GbF-MJ-6b1" secondAttribute="trailing" constant="88" id="Upw-6a-RcB"/>
-                        <constraint firstItem="Vyg-pP-65c" firstAttribute="top" secondItem="GbF-MJ-6b1" secondAttribute="bottom" constant="15" id="tiZ-tX-V1H"/>
+                        <constraint firstAttribute="height" constant="200" id="feY-KF-9Bb"/>
+                        <constraint firstItem="Vyg-pP-65c" firstAttribute="top" secondItem="GbF-MJ-6b1" secondAttribute="bottom" constant="15" id="tiZ-tX-V1H">
+                            <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                        </constraint>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="feY-KF-9Bb"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="feY-KF-9Bb"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +88,7 @@
                 <outlet property="btnReload" destination="08l-73-9u6" id="F7T-6g-s4L"/>
                 <outlet property="textEmpty" destination="Vyg-pP-65c" id="iy9-3p-ULm"/>
             </connections>
-            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+            <point key="canvasLocation" x="137.32394366197184" y="151.875"/>
         </view>
     </objects>
     <resources>

@@ -188,7 +188,6 @@
 			children = (
 				712510362203BE0200341266 /* UITableView */,
 				712510332203BD9E00341266 /* UINavigatorBar */,
-				712510322203BD8F00341266 /* Data */,
 				712510312203BD8100341266 /* UIView */,
 			);
 			path = Categories;
@@ -266,13 +265,6 @@
 				712510392203BE4E00341266 /* UIView+Creation.swift */,
 			);
 			path = UIView;
-			sourceTree = "<group>";
-		};
-		712510322203BD8F00341266 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		712510332203BD9E00341266 /* UINavigatorBar */ = {
@@ -819,6 +811,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V45JLUUNCB;
 				INFOPLIST_FILE = SearchProduct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -838,6 +831,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V45JLUUNCB;
 				INFOPLIST_FILE = SearchProduct/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

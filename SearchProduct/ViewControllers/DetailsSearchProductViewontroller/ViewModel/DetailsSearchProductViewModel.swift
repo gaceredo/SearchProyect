@@ -63,7 +63,7 @@ class DetailsSearchProductViewModel: NSObject {
             let price = result?.price, let availableQuantity =  result?.availableQuantity{
             
             cell.priceDetails.text = "\(validateCurrenc(currencyId)) \(Int(price))"
-            cell.discountDetails.text = "Disponibles: \(availableQuantity) "
+            cell.discountDetails.text = "\(available): \(availableQuantity) "
         }
         return cell
     }
