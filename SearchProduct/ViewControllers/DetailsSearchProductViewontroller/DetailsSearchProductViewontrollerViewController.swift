@@ -16,14 +16,14 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
     
     var idPrduct:String?{
         didSet{
-            viewModel.callDetailsSearchProduct(idPrduct ?? "")
-            viewModel.callDescriptionProduct(idPrduct ?? "")
+            viewModel.callDetailsSearchProduct(idPrduct ?? LocalizableStrings.Placeholders.emptyText.localized)
+            viewModel.callDescriptionProduct(idPrduct ?? LocalizableStrings.Placeholders.emptyText.localized)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        self.setupTableView()
     }
     
     func setupTableView()  {
@@ -39,10 +39,11 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
     }
     
     func response(isValid: Bool) {
-        
+        //validate response 
     }
-    
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     
     func reloadTableView() {
         self.tableView.reloadData()

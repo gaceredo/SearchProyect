@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SearchProductViewController: UIViewController,SearchProductDelegate {
+class SearchProductViewController: UIViewController,SearchProductDelegate,EmptyResultSearchDelegate {
+   
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -21,7 +22,10 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
         setupTableView()
         setupSearch()
         viewModel.delegate = self
-        title = "Buscar Prducto"
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+         title = LocalizableStrings.Search.titleSearchScreen.localized
     }
 
     func setupTableView()  {
@@ -44,6 +48,7 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
         if (self.emptyResultSearch == nil) {
             self.emptyResultSearch = EmptyResultSearch.loadFirstViewFromNib()
             if let emptyResultSearch = self.emptyResultSearch {
+                emptyResultSearch.delegate = self
                 self.view.addSubview(emptyResultSearch)
                 emptyResultSearch.insetsZeroToSuperview()
             }
@@ -60,6 +65,15 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
         let searchDetailsViewController: DetailsSearchProductViewontrollerViewController = DetailsSearchProductViewontrollerViewController.loadFromNib()
         searchDetailsViewController.idPrduct = id
         navigationController?.pushViewController(searchDetailsViewController, animated: true)
+    }
+    
+    func reloadSearch() {
+        if let viewWithTag = self.view.viewWithTag(1) {
+            viewWithTag.removeFromSuperview()
+            self.searchBar.text = LocalizableStrings.Placeholders.emptyText.localized
+            self.viewModel.results.removeAll()
+            self.tableView.reloadData()
+        }
     }
 
 }

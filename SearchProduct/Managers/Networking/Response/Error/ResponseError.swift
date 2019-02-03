@@ -62,7 +62,7 @@ enum ResponseError: Error {
         case .genericError:
             return LocalizableStrings.Errors.titleGenericError.localized
         default:
-            return ""
+            return LocalizableStrings.Placeholders.emptyText.localized
         }
     }
     
@@ -94,7 +94,7 @@ enum ResponseError: Error {
              .serviceUnavailable522:
             return LocalizableStrings.Errors.descriptionserviceUnavailable520.localized
         default:
-            return ""
+            return LocalizableStrings.Placeholders.emptyText.localized
         }
     }
 }

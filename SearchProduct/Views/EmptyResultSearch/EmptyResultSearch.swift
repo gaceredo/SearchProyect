@@ -25,9 +25,10 @@ class EmptyResultSearch: UIView {
     }
     
     func seupIU(){
+        textEmpty.text = LocalizableStrings.Placeholders.descriptionEmptyPlaceholder.localized
         btnReload.backgroundColor = .yellowML
         btnReload.setTitleColor(.white, for: .normal)
-        btnReload.setTitle("Buscar resultados", for: .normal)
+        btnReload.setTitle(LocalizableStrings.Placeholders.buttonEmptyPlaceholder.localized, for: .normal)
         
     }
     

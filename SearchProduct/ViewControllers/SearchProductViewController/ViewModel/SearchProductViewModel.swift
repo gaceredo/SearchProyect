@@ -18,10 +18,14 @@ class SearchProductViewModel:NSObject {
     
     var delegate:SearchProductDelegate? = nil
     var results: [ResultModel] = []
-    var searchText:String = ""
+    var searchText:String = LocalizableStrings.Placeholders.emptyText.localized
     
     
     func callSearchProductManager()  {
+        
+        guard searchText.count > 0 else {
+            return
+        }
         SearchProductManager.shared.getSearchProduct(parameters: ["q":searchText], success: { [weak self] (response) in
             
             guard let result = response.results, result.count > 0 else {

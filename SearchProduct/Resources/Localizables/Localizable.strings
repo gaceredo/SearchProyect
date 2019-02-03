@@ -5,3 +5,36 @@
   Created by Luis Aceredo on 2/1/19.
   Copyright © 2019 Luis Aceredo. All rights reserved.
 */
+
+"TitleBadRequest" = "Bad Request";
+"TitleUnauthorized" = "Unauthorized";
+"TitleForbidden" = "Forbidden";
+"TitleNotFound" = "Not Found";
+"TitleMethodNotFound" = "Method Not Found";
+"TitleConflict" = "Conflict";
+"TitlePreconditionFailed" = "Precondition Failed";
+"TitleUnprocessibleEntity" = "Unprocessible Entity";
+"TitleRateLimitExceeded" = "Rate Limit Exceeded";
+"TitleServerError" = "Server Error";
+"TitleServiceUnavailable" = "Service Unavailable";
+"TitleGenericError" = "Services failed";
+
+"DescriptionBadRequest" = "Request couldn't be parsed";
+"DescriptionUnauthorized" = "OAuth must be provided";
+"DescriptionForbidden" = "Invalid API key or unapproved app";
+"DescriptionNotFound" = "Method exists, but no record found";
+"DescriptionMethodNotFound" = "Method doesn't exist";
+"DescriptionConflict" = "Resource already created";
+"DescriptionPreconditionFailed" = "Use application/json content type";
+"DescriptionUnprocessibleEntity" = "Validation errors";
+"DescriptionServerError" = "Please open a support issue";
+"DescriptionServiceUnavailable" = "Server overloaded (try again in 30s)";
+"DescriptionserviceUnavailable520" = "Cloudflare error";
+"DescriptionGenericError" = "Services failed";
+
+"descriptionEmptyPlaceholder" = "No se han encontrado ningun articulo";
+"buttonEmptyPlaceholder" = "Buscar de nuevo";
+"titleSearchScreen" = "Buscar productos";
+"imagePlaceholder" = "placeholder";
+
+"emptyText"="";

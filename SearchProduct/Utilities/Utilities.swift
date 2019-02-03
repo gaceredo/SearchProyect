@@ -41,7 +41,7 @@ func setImage(urlImage:String?, image: inout UIImageView, completion : @escaping
     image.contentMode = .scaleAspectFit
     image.kf.setImage(
         with: url,
-        placeholder: UIImage(named: "placeholder"),
+        placeholder: UIImage(named: LocalizableStrings.Placeholders.imagePlaceholder.localized),
         options: [
             .processor(processor),
             .scaleFactor(UIScreen.main.scale),
@@ -52,7 +52,9 @@ func setImage(urlImage:String?, image: inout UIImageView, completion : @escaping
         result in
         switch result {
         case .success(let value):
-            completion(value.source.url)
+            if !value.cacheType.cached{
+                completion(value.source.url)
+            }
         case .failure( _):
             break
         }

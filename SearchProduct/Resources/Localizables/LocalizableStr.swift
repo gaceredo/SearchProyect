@@ -39,4 +39,13 @@ enum LocalizableStrings {
         case descriptionGenericError = "DescriptionGenericError"
     }
     
+    enum Placeholders: String, Localizable {
+        case descriptionEmptyPlaceholder = "descriptionEmptyPlaceholder"
+        case buttonEmptyPlaceholder = "buttonEmptyPlaceholder"
+        case imagePlaceholder = "imagePlaceholder"
+        case emptyText = "emptyText"
+    }
+    enum Search:String, Localizable {
+        case titleSearchScreen = "titleSearchScreen"
+    }
 }
