@@ -14,12 +14,14 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var viewModel: SearchProductViewModel = SearchProductViewModel()
+    var emptyResultSearch: EmptyResultSearch? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupSearch()
         viewModel.delegate = self
+        title = "Buscar Prducto"
     }
 
     func setupTableView()  {
@@ -33,7 +35,18 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
 
     func response(isValid: Bool) {
         if !isValid {
-            //inser view not result
+            self.insertViewEmptySearch()
+            self.searchBar.resignFirstResponder()
+        }
+    }
+    
+    func insertViewEmptySearch() {
+        if (self.emptyResultSearch == nil) {
+            self.emptyResultSearch = EmptyResultSearch.loadFirstViewFromNib()
+            if let emptyResultSearch = self.emptyResultSearch {
+                self.view.addSubview(emptyResultSearch)
+                emptyResultSearch.insetsZeroToSuperview()
+            }
         }
     }
     

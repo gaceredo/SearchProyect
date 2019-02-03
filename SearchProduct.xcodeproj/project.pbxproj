@@ -60,6 +60,10 @@
 		71879754220536BE003E5239 /* PagingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71879753220536BE003E5239 /* PagingModel.swift */; };
 		7187975722060ED6003E5239 /* SearchProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187975522060ED6003E5239 /* SearchProductTableViewCell.swift */; };
 		7187975822060ED6003E5239 /* SearchProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7187975622060ED6003E5239 /* SearchProductTableViewCell.xib */; };
+		71C06608220719AC00D7075A /* EmptyResultSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C06607220719AC00D7075A /* EmptyResultSearch.xib */; };
+		71C0660A22071A8B00D7075A /* EmptyResultSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0660922071A8B00D7075A /* EmptyResultSearch.swift */; };
+		71DDF664220725AF0087A4EB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDF663220725AF0087A4EB /* UIView+Extension.swift */; };
+		71DDF666220725D70087A4EB /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DDF665220725D70087A4EB /* NSObject+Extension.swift */; };
 		F07D590710F9E0731397B4CA /* Pods_SearchProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CFDAFC76AFC7852F6EE30DA /* Pods_SearchProduct.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +123,10 @@
 		71879753220536BE003E5239 /* PagingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingModel.swift; sourceTree = "<group>"; };
 		7187975522060ED6003E5239 /* SearchProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductTableViewCell.swift; sourceTree = "<group>"; };
 		7187975622060ED6003E5239 /* SearchProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchProductTableViewCell.xib; sourceTree = "<group>"; };
+		71C06607220719AC00D7075A /* EmptyResultSearch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyResultSearch.xib; sourceTree = "<group>"; };
+		71C0660922071A8B00D7075A /* EmptyResultSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultSearch.swift; sourceTree = "<group>"; };
+		71DDF663220725AF0087A4EB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		71DDF665220725D70087A4EB /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		8CFDAFC76AFC7852F6EE30DA /* Pods_SearchProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75BCF59B2CAD38B6578252E /* Pods-SearchProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchProduct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		C72354B6D50925D3F379FADC /* Pods-SearchProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchProduct.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,11 +251,11 @@
 		7125102F2203B99C00341266 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71C0660B22071B3800D7075A /* HeaderDescription */,
+				71C066062207198000D7075A /* EmptyResultSearch */,
 				7169B48822069A1C00491B3F /* HeaderDetailsSearch */,
 				7169B487220699F000491B3F /* ScrollImage */,
 				7169B486220699DC00491B3F /* SearchProduct */,
-				71866E322206B3F6006FBB01 /* HeaderDescriptionTableViewCell.swift */,
-				71866E332206B3F6006FBB01 /* HeaderDescriptionTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +359,8 @@
 			children = (
 				7125105F22048D8A00341266 /* UIViewController+Extension.swift */,
 				7169B48222067D6600491B3F /* UIColor+Extension.swift */,
+				71DDF663220725AF0087A4EB /* UIView+Extension.swift */,
+				71DDF665220725D70087A4EB /* NSObject+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -455,6 +465,24 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
+		71C066062207198000D7075A /* EmptyResultSearch */ = {
+			isa = PBXGroup;
+			children = (
+				71C06607220719AC00D7075A /* EmptyResultSearch.xib */,
+				71C0660922071A8B00D7075A /* EmptyResultSearch.swift */,
+			);
+			path = EmptyResultSearch;
+			sourceTree = "<group>";
+		};
+		71C0660B22071B3800D7075A /* HeaderDescription */ = {
+			isa = PBXGroup;
+			children = (
+				71866E322206B3F6006FBB01 /* HeaderDescriptionTableViewCell.swift */,
+				71866E332206B3F6006FBB01 /* HeaderDescriptionTableViewCell.xib */,
+			);
+			path = HeaderDescription;
+			sourceTree = "<group>";
+		};
 		AD103B125789978FD3D6A095 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +560,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C06608220719AC00D7075A /* EmptyResultSearch.xib in Resources */,
 				71251066220494CA00341266 /* SearchProductViewController.xib in Resources */,
 				71257C81220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib in Resources */,
 				7169B47E2206702E00491B3F /* ScrollImageTableViewCell.xib in Resources */,
@@ -556,6 +585,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchProduct/Pods-SearchProduct-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -565,6 +595,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -606,9 +637,12 @@
 				7169B48322067D6600491B3F /* UIColor+Extension.swift in Sources */,
 				7125103A2203BE4E00341266 /* UIView+Creation.swift in Sources */,
 				7125103D2203BEB000341266 /* ReusableCell.swift in Sources */,
+				71C0660A22071A8B00D7075A /* EmptyResultSearch.swift in Sources */,
 				7125105D22048CAF00341266 /* CustomNavigation.swift in Sources */,
 				71866E342206B3F6006FBB01 /* HeaderDescriptionTableViewCell.swift in Sources */,
 				7187975722060ED6003E5239 /* SearchProductTableViewCell.swift in Sources */,
+				71DDF664220725AF0087A4EB /* UIView+Extension.swift in Sources */,
+				71DDF666220725D70087A4EB /* NSObject+Extension.swift in Sources */,
 				712510802205099300341266 /* DateFormatter+Creation.swift in Sources */,
 				712CB14022061A5600654956 /* SearchProductViewController+SearchBar.swift in Sources */,
 				7125106E2204D84100341266 /* RestApi.swift in Sources */,

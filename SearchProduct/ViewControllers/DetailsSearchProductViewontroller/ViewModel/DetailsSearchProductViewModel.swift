@@ -20,7 +20,7 @@ class DetailsSearchProductViewModel: NSObject {
     var result: ResultModel?
     var textDescription:String?
     var delegate:DetailsSearchProductDelegate?
-    
+    var isFirst = 0
     func callDetailsSearchProduct(_ id:String)  {
         DetailsSearchProductManager.shared.getDetailsSearchProduct(IdProduct: id, success: { [weak self]  (success) in
             self?.result = success
@@ -66,13 +66,14 @@ class DetailsSearchProductViewModel: NSObject {
             cell.discountDetails.text = "Disponibles: \(availableQuantity) "
         }
         
-        
         return cell
     }
     
     func cellScrollImage(_ tableView:UITableView,_ indexPath:IndexPath ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ScrollImageTableViewCell.xibName, for: indexPath) as! ScrollImageTableViewCell
+       
         cell.setup(imageUrlArray)
+     
         return cell
     }
     func cellDescription(_ tableView:UITableView,_ indexPath:IndexPath ) -> UITableViewCell {

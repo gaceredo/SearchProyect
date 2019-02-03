@@ -8,5 +8,6 @@ target 'SearchProduct' do
     pod 'Moya'
     pod 'SVProgressHUD'
     pod 'Kingfisher'
+    pod 'Masonry'
 
 end

@@ -24,7 +24,8 @@ class SearchProductViewModel:NSObject {
     func callSearchProductManager()  {
         SearchProductManager.shared.getSearchProduct(parameters: ["q":searchText], success: { [weak self] (response) in
             
-            guard let result = response.results else {
+            guard let result = response.results, result.count > 0 else {
+                 self?.delegate?.response(isValid: false)
                 return
             }
             self?.results = result

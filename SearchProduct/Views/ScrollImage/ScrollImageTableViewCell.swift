@@ -17,16 +17,13 @@ class ScrollImageTableViewCell: UITableViewCell, ReusableCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         scrollView.frame = self.frame
-
     }
 
     func setup(_ image:[PicturesModel])  {
         
         for i in 0 ..< image.count{
             var imageView = UIImageView()
-            
-            DispatchQueue.main.async {
-                
+            DispatchQueue.main.async{
                 setImage(urlImage: image[i].url, image: &imageView) { (image) in
                     imageView.kf.setImage(with: image)
                 }
@@ -38,6 +35,10 @@ class ScrollImageTableViewCell: UITableViewCell, ReusableCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+       
+    }
 
     
 }

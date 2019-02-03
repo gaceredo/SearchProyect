@@ -42,6 +42,8 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
         
     }
     
+    
+    
     func reloadTableView() {
         self.tableView.reloadData()
     }
