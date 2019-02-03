@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-ug-8b7">
                                 <rect key="frame" x="16" y="0.0" width="288" height="137.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpz-Z0-BIn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Vpz-Z0-BIn">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="71.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -102,6 +102,7 @@
                 <outlet property="priceDetails" destination="d9c-ye-Auv" id="RkP-qa-SEa"/>
                 <outlet property="sendDetails" destination="kwi-QO-sLC" id="exe-BS-rbe"/>
                 <outlet property="titleDetails" destination="Vpz-Z0-BIn" id="jc6-n0-Kno"/>
+                <outlet property="view" destination="c9j-Fr-Ana" id="Lqf-TH-QaH"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="111.54422788605699"/>
         </tableViewCell>

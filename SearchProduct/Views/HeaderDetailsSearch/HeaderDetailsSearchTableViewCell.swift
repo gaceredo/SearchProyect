@@ -14,10 +14,10 @@ class HeaderDetailsSearchTableViewCell: UITableViewCell, ReusableCell {
     @IBOutlet weak var sendDetails: UILabel!
     @IBOutlet weak var priceDetails: UILabel!
     @IBOutlet weak var discountDetails: UILabel!
+    @IBOutlet weak var view: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

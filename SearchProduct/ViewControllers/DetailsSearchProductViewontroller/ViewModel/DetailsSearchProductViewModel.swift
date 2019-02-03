@@ -53,7 +53,7 @@ class DetailsSearchProductViewModel: NSObject {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderDetailsSearchTableViewCell.xibName, for: indexPath) as! HeaderDetailsSearchTableViewCell
         cell.titleDetails.text = self.result?.title
-        cell.titleDetails.sizeToFit()
+        
         if let warranty = self.result?.warranty {
             cell.sendDetails.text = warranty
         }else{
@@ -65,7 +65,6 @@ class DetailsSearchProductViewModel: NSObject {
             cell.priceDetails.text = "\(validateCurrenc(currencyId)) \(Int(price))"
             cell.discountDetails.text = "Disponibles: \(availableQuantity) "
         }
-        
         return cell
     }
     

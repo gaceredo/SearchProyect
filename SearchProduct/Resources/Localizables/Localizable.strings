@@ -32,9 +32,9 @@
 "DescriptionserviceUnavailable520" = "Cloudflare error";
 "DescriptionGenericError" = "Services failed";
 
-"descriptionEmptyPlaceholder" = "No se han encontrado ningun articulo";
+"descriptionEmptyPlaceholder" = "No se han encontrado ningun artículo";
 "buttonEmptyPlaceholder" = "Buscar de nuevo";
-"titleSearchScreen" = "Buscar productos";
+"titleSearchScreen" = "Buscar artículo";
 "imagePlaceholder" = "placeholder";
 
 "emptyText"="";
