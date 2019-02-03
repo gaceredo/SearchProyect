@@ -39,9 +39,13 @@
 		7125108522051A7C00341266 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7125108422051A7C00341266 /* Utilities.swift */; };
 		71257C7A220633DE00030669 /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71257C79220633DE00030669 /* UIViewController+HUD.swift */; };
 		71257C7C2206467600030669 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71257C7B2206467600030669 /* Constants.swift */; };
+		71257C80220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71257C7E220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift */; };
+		71257C81220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71257C7F220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib */; };
 		712CB13B220612D700654956 /* SearchProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13A220612D700654956 /* SearchProductViewModel.swift */; };
 		712CB13E2206131E00654956 /* SearchProductViewModel+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13D2206131E00654956 /* SearchProductViewModel+Delegate.swift */; };
 		712CB14022061A5600654956 /* SearchProductViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */; };
+		7169B47D2206702E00491B3F /* ScrollImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169B47B2206702E00491B3F /* ScrollImageTableViewCell.swift */; };
+		7169B47E2206702E00491B3F /* ScrollImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7169B47C2206702E00491B3F /* ScrollImageTableViewCell.xib */; };
 		7187974322053485003E5239 /* SellerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187974222053485003E5239 /* SellerModel.swift */; };
 		71879745220534A5003E5239 /* InstallmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71879744220534A5003E5239 /* InstallmentsModel.swift */; };
 		71879747220534BC003E5239 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71879746220534BC003E5239 /* AddressModel.swift */; };
@@ -91,9 +95,13 @@
 		7125108422051A7C00341266 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		71257C79220633DE00030669 /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
 		71257C7B2206467600030669 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71257C7E220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSearchProductViewontrollerViewController.swift; sourceTree = "<group>"; };
+		71257C7F220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsSearchProductViewontrollerViewController.xib; sourceTree = "<group>"; };
 		712CB13A220612D700654956 /* SearchProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductViewModel.swift; sourceTree = "<group>"; };
 		712CB13D2206131E00654956 /* SearchProductViewModel+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchProductViewModel+Delegate.swift"; sourceTree = "<group>"; };
 		712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchProductViewController+SearchBar.swift"; sourceTree = "<group>"; };
+		7169B47B2206702E00491B3F /* ScrollImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImageTableViewCell.swift; sourceTree = "<group>"; };
+		7169B47C2206702E00491B3F /* ScrollImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollImageTableViewCell.xib; sourceTree = "<group>"; };
 		7187974222053485003E5239 /* SellerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerModel.swift; sourceTree = "<group>"; };
 		71879744220534A5003E5239 /* InstallmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsModel.swift; sourceTree = "<group>"; };
 		71879746220534BC003E5239 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 		712510292203B92900341266 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				71257C7D2206577C00030669 /* DetailsSearchProductViewontroller */,
 				712510682204956C00341266 /* SearchProductViewController */,
 				712510672204955B00341266 /* ProductsViewController */,
 			);
@@ -231,6 +240,8 @@
 			children = (
 				7187975522060ED6003E5239 /* SearchProductTableViewCell.swift */,
 				7187975622060ED6003E5239 /* SearchProductTableViewCell.xib */,
+				7169B47B2206702E00491B3F /* ScrollImageTableViewCell.swift */,
+				7169B47C2206702E00491B3F /* ScrollImageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +395,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		71257C7D2206577C00030669 /* DetailsSearchProductViewontroller */ = {
+			isa = PBXGroup;
+			children = (
+				71257C7E220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift */,
+				71257C7F220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib */,
+			);
+			path = DetailsSearchProductViewontroller;
+			sourceTree = "<group>";
+		};
 		712CB13C220612FD00654956 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +500,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				71251066220494CA00341266 /* SearchProductViewController.xib in Resources */,
+				71257C81220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib in Resources */,
+				7169B47E2206702E00491B3F /* ScrollImageTableViewCell.xib in Resources */,
 				7187975822060ED6003E5239 /* SearchProductTableViewCell.xib in Resources */,
 				7125101E2203B78F00341266 /* LaunchScreen.storyboard in Resources */,
 				7125104E22047CC300341266 /* Localizable.strings in Resources */,
@@ -559,6 +581,7 @@
 				7187974E2205366D003E5239 /* ReviewsModel.swift in Sources */,
 				71251065220494CA00341266 /* SearchProductViewController.swift in Sources */,
 				712CB13E2206131E00654956 /* SearchProductViewModel+Delegate.swift in Sources */,
+				71257C80220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift in Sources */,
 				71257C7C2206467600030669 /* Constants.swift in Sources */,
 				7187974322053485003E5239 /* SellerModel.swift in Sources */,
 				7125106A2204997100341266 /* ProductsViewController+NavigatorBar.swift in Sources */,
@@ -577,6 +600,7 @@
 				712510382203BE1E00341266 /* UITableView+Register.swift in Sources */,
 				7125104422047B2400341266 /* Network.swift in Sources */,
 				7125107E2205094900341266 /* Mappable.swift in Sources */,
+				7169B47D2206702E00491B3F /* ScrollImageTableViewCell.swift in Sources */,
 				71879745220534A5003E5239 /* InstallmentsModel.swift in Sources */,
 				7187975022053684003E5239 /* ResultModel.swift in Sources */,
 				712510352203BDCF00341266 /* UINavigationBar+Extension.swift in Sources */,

@@ -10,8 +10,6 @@ import Foundation
 
 enum ResponseError: Error {
     case ok
-    case okPost
-    case okDelete
     
     case badRequest
     case unauthorized

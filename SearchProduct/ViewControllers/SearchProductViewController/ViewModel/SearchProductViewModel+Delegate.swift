@@ -29,11 +29,24 @@ extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
         
         cell.titleProduct.text = index.title
         
-        if let currencyId = index.currencyId, let price = index.price{
-            cell.descriptionsProduct.text = "\(currencyId == isDolar ? "U$S" : "$") \(price.description)"
+        if let currencyId = index.currencyId,
+            let price = index.price,
+            let quantity = index.installments?.quantity,
+            let amount = index.installments?.amount,
+            let currencyIdInstallments = index.installments?.currencyId {
+            
+            cell.descriptionsProduct.text = "\(validateCurrenc(currencyId)) \(Int(price)) - \(Int(quantity)) x \(validateCurrenc(currencyIdInstallments))\(Int(amount))"
         }
         cell.setImage(urlImage: index.thumbnail!)
        
         return cell
+    }
+    
+    
+    func validateCurrenc(_ currencyId:String) -> String {
+        if currencyId == isDolar {
+            return "U$S"
+        }
+        return "$"
     }
 }

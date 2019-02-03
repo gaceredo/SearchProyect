@@ -10,9 +10,6 @@ import Foundation
 
 enum ResponseStatusCode: Int {
     case ok = 200
-    case okPost = 201
-    case okDelete = 204
-    
     case badRequest = 400
     case unauthorized = 401
     case forbidden = 403
@@ -34,7 +31,7 @@ enum ResponseStatusCode: Int {
     
     func isSuccess() -> Bool {
         switch self {
-        case .ok, .okPost, .okDelete:
+        case .ok:
             return true
         default:
             return false
