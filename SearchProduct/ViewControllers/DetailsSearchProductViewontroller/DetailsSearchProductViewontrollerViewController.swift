@@ -16,18 +16,20 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
     
     var idPrduct:String?{
         didSet{
-          viewModel.callDetailsSearchProduct(idPrduct!)
+            viewModel.callDetailsSearchProduct(idPrduct ?? "")
+            viewModel.callDescriptionProduct(idPrduct ?? "")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         setupTableView()
-        
+        setupTableView()
     }
     
     func setupTableView()  {
+        tableView.registerNib(HeaderDescriptionTableViewCell.self)
         tableView.registerNib(ScrollImageTableViewCell.self)
+        tableView.registerNib(HeaderDetailsSearchTableViewCell.self)
         viewModel.delegate = self
         tableView.delegate = viewModel
         tableView.dataSource = viewModel
@@ -44,6 +46,4 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
         self.tableView.reloadData()
     }
     
-    
-
 }

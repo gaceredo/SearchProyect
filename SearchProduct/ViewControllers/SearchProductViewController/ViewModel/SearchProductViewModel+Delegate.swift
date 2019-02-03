@@ -25,6 +25,11 @@ extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
     
     func searchCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         
+      return cellSearchProduc(tableView, indexPath)
+    }
+    
+    func cellSearchProduc(_ tableView:UITableView, _ indexPath:IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchProductTableViewCell.xibName, for: indexPath) as! SearchProductTableViewCell
         let index = results[indexPath.row]
         
@@ -38,8 +43,13 @@ extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
             
             cell.descriptionsProduct.text = "\(validateCurrenc(currencyId)) \(Int(price)) - \(Int(quantity)) x \(validateCurrenc(currencyIdInstallments))\(Int(amount))"
         }
-        cell.setImage(urlImage: index.thumbnail!)
-       
+        
+        setImage(urlImage: index.thumbnail, image: &cell.imageProduct) { (image) in
+            cell.imageProduct.kf.setImage(with: image)
+            
+        }
+        
         return cell
     }
+    
 }

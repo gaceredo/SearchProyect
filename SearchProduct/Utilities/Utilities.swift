@@ -38,6 +38,7 @@ func setImage(urlImage:String?, image: inout UIImageView, completion : @escaping
     let processor = DownsamplingImageProcessor(size: image.frame.size)
         >> RoundCornerImageProcessor(cornerRadius: 0)
     image.kf.indicatorType = .activity
+    image.contentMode = .scaleAspectFit
     image.kf.setImage(
         with: url,
         options: [

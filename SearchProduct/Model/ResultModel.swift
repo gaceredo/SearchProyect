@@ -33,7 +33,7 @@ class ResultModel: Mappable {
     let originalPrice:Int?
     let reviews:ReviewsModel?
     let pictures:[PicturesModel]?
-    
+    let warranty:String?
     enum CodingKeys:String, CodingKey {
         case id
         case siteId = "site_id"
@@ -57,6 +57,7 @@ class ResultModel: Mappable {
         case originalPrice = "original_price"
         case reviews
         case pictures
+        case warranty
     }
 }
 
@@ -75,5 +76,21 @@ class PicturesModel: Mappable {
         case size
         case maxSize = "max_size"
         case quality
+    }
+}
+
+class DescriptionProduct: Mappable {
+    
+    var text: String?
+    var plainText: String?
+    var lastUpdated:String?
+    var dateCreated: String?
+    
+    enum CodingKeys:String, CodingKey {
+        case text
+        case plainText = "plain_text"
+        case lastUpdated = "last_updated"
+        case dateCreated = "date_created"
+
     }
 }

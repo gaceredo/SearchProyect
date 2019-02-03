@@ -27,3 +27,22 @@ class DetailsSearchProductManager {
         }
     }
 }
+
+class DescriptionsSearchProductManager {
+    
+    static let shared: DescriptionsSearchProductManager = DescriptionsSearchProductManager()
+    
+    func getDetailsSearchProduct(IdProduct:String,
+                                 success:@escaping (DescriptionProduct) -> Void,
+                                 failure:@escaping (Error) -> Void) {
+        RequestManager().request(target: .descriptionSearchProduct(withIdProduct: IdProduct), requestHandlerCompletion: { ( response) in
+            
+            if let items = DescriptionProduct(jsonString: response.description){
+                success(items)
+            }
+            
+        }) { (error) in
+            failure(error)
+        }
+    }
+}

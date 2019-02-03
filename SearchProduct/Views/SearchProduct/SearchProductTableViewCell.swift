@@ -32,31 +32,5 @@ class SearchProductTableViewCell: UITableViewCell, ReusableCell {
         imageProduct.image = nil
         descriptionsProduct.text = nil
     }
-
-    func setImage(urlImage:String){
-        let url = URL(string: urlImage)
-        let processor = DownsamplingImageProcessor(size: imageProduct.frame.size)
-            >> RoundCornerImageProcessor(cornerRadius: 0)
-        imageProduct.kf.indicatorType = .activity
-        imageProduct.kf.setImage(
-            with: url,
-            options: [
-                .processor(processor),
-                .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(1)),
-                .cacheOriginalImage
-            ])
-        {
-            result in
-            switch result {
-            case .success(let value):
-                if let url = value.source.url{
-                     self.imageProduct.kf.setImage(with: url)
-                }
-            case .failure( _):
-               break
-            }
-        }
-    }
     
 }
