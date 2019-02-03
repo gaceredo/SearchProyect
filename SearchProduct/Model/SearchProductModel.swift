@@ -7,17 +7,16 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class SearchProductModel: Mappable {
-   
+    
     let siteID: String?
     let query: String?
     let paging: PagingModel?
     let results: [ResultModel]?
     let sort: SortModel?
     let availableSorts:[SortModel]?
-
+    
     enum CodingKeys: String, CodingKey {
         case siteID = "site_id"
         case query
@@ -25,7 +24,7 @@ class SearchProductModel: Mappable {
         case results
         case sort
         case availableSorts = "available_sorts"
-
+        
     }
 }
 

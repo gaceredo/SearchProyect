@@ -8,7 +8,7 @@ Develop an app using Market APIs Free, that allows a user to see the details of 
 
 - The project was implemented using MVVM
 - I used Xcode 10.1
-- Deployment Target is 12.0
+- Deployment Target is 10.0
 - Target for unitTests
 - 3rd party frameworks added with CocoaPods
 

@@ -6,7 +6,6 @@
 //  Copyright © 2019 Luis Aceredo. All rights reserved.
 //
 
-
 import Moya
 import SwiftyJSON
 import Moya
@@ -14,7 +13,7 @@ import Moya
 typealias RequestCompletion = (JSON) -> Void
 typealias RequestFailure = (ResponseError) -> Void
 
- class RequestManager: NSObject {
+class RequestManager: NSObject {
     
     var provider = MoyaProvider<RestApi>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
     

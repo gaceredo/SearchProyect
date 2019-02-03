@@ -16,7 +16,7 @@ enum RestApi {
 }
 
 extension RestApi: TargetType {
-   
+    
     // implement user token if necessary
     var headers: [String : String]? {
         return nil
@@ -31,7 +31,7 @@ extension RestApi: TargetType {
         switch self {
             
         case .searchProduct(_):
-           return RouterURL.searchProduct()
+            return RouterURL.searchProduct()
         case .detailsSearchProduct(let id):
             return RouterURL.detailsSearchProduct(id)
         case .descriptionSearchProduct(let id):

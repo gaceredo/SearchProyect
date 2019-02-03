@@ -10,4 +10,8 @@ target 'SearchProduct' do
     pod 'Kingfisher'
     pod 'Masonry'
 
+target 'SearchProductTests' do
+   pod 'Moya' 
+end
+
 end

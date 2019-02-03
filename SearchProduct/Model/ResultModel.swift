@@ -61,36 +61,6 @@ class ResultModel: Mappable {
     }
 }
 
-class PicturesModel: Mappable {
-   let id: String?
-   let url: String?
-   let secureUrl: String?
-   let size:String?
-   let maxSize: String?
-   let quality: String?
-    
-    enum CodingKeys:String, CodingKey {
-        case id
-        case url
-        case secureUrl = "secure_url"
-        case size
-        case maxSize = "max_size"
-        case quality
-    }
-}
 
-class DescriptionProduct: Mappable {
-    
-    var text: String?
-    var plainText: String?
-    var lastUpdated:String?
-    var dateCreated: String?
-    
-    enum CodingKeys:String, CodingKey {
-        case text
-        case plainText = "plain_text"
-        case lastUpdated = "last_updated"
-        case dateCreated = "date_created"
 
-    }
-}
+
