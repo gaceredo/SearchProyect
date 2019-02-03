@@ -32,7 +32,7 @@ class ResultModel: Mappable {
     let categoryId: String?
     let originalPrice:Int?
     let reviews:ReviewsModel?
-    
+    let pictures:[PicturesModel]?
     
     enum CodingKeys:String, CodingKey {
         case id
@@ -56,5 +56,24 @@ class ResultModel: Mappable {
         case categoryId = "category_id"
         case originalPrice = "original_price"
         case reviews
+        case pictures
+    }
+}
+
+class PicturesModel: Mappable {
+   let id: String?
+   let url: String?
+   let secureUrl: String?
+   let size:String?
+   let maxSize: String?
+   let quality: String?
+    
+    enum CodingKeys:String, CodingKey {
+        case id
+        case url
+        case secureUrl = "secure_url"
+        case size
+        case maxSize = "max_size"
+        case quality
     }
 }

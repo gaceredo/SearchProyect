@@ -11,6 +11,7 @@ import Moya
 
 enum RestApi {
     case searchProduct(withParameters: [String: String])
+    case detailsSearchProduct(withIdProduct: String)
 }
 
 extension RestApi: TargetType {
@@ -30,6 +31,8 @@ extension RestApi: TargetType {
             
         case .searchProduct(_):
            return RouterURL.searchProduct()
+        case .detailsSearchProduct(let id):
+            return RouterURL.detailsSearchProduct(id)
         }
     }
     public var shouldAuthorize: Bool { // should be false only for the app init
@@ -42,9 +45,10 @@ extension RestApi: TargetType {
     
     public var task: Task {
         switch self {
-         
         case .searchProduct(let param):
             return .requestParameters(parameters: param, encoding: URLEncoding.default)
+        default:
+            return .requestPlain
         }
     }
     

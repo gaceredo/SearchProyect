@@ -11,6 +11,6 @@ import Foundation
 struct RouterBase {
     
     static func serverURL() -> String {
-        return "https://api.mercadolibre.com/sites/MLU/"
+        return "https://api.mercadolibre.com/"
     }
 }

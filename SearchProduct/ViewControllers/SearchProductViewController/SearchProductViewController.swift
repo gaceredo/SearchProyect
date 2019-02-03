@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchProductViewController: UIViewController,SearchProductDelegate {
-   
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -40,6 +40,13 @@ class SearchProductViewController: UIViewController,SearchProductDelegate {
     func reloadTableView() {
         self.hideHUD()
         self.tableView.reloadData()
+    }
+    
+    func pushViewController(_ id: String?) {
+        
+        let searchDetailsViewController: DetailsSearchProductViewontrollerViewController = DetailsSearchProductViewontrollerViewController.loadFromNib()
+        searchDetailsViewController.idPrduct = id
+        navigationController?.pushViewController(searchDetailsViewController, animated: true)
     }
 
 }

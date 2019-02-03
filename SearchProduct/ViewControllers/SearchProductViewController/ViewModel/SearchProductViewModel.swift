@@ -11,6 +11,7 @@ import Foundation
 protocol SearchProductDelegate:class {
     func response(isValid:Bool)
     func reloadTableView()
+    func pushViewController(_ id:String?)
 }
 
 class SearchProductViewModel:NSObject {
@@ -21,7 +22,7 @@ class SearchProductViewModel:NSObject {
     
     
     func callSearchProductManager()  {
-        SearchProductManager.shared.getNewsFeedCategory(parameters: ["q":searchText], success: { [weak self] (response) in
+        SearchProductManager.shared.getSearchProduct(parameters: ["q":searchText], success: { [weak self] (response) in
             
             guard let result = response.results else {
                 return

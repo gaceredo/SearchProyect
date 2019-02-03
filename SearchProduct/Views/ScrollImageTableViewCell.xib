@@ -19,15 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pV8-vi-SWV">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KE6-8f-VOs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
-                    </scrollView>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pV8-vi-SWV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pV8-vi-SWV" secondAttribute="bottom" id="AkH-g4-NcV"/>
+                            <constraint firstAttribute="trailing" secondItem="pV8-vi-SWV" secondAttribute="trailing" id="BLN-0S-FA5"/>
+                            <constraint firstAttribute="height" constant="134.5" id="NKO-Ma-MSC"/>
+                            <constraint firstItem="pV8-vi-SWV" firstAttribute="top" secondItem="KE6-8f-VOs" secondAttribute="top" id="gez-1t-pLg"/>
+                            <constraint firstItem="pV8-vi-SWV" firstAttribute="leading" secondItem="KE6-8f-VOs" secondAttribute="leading" id="mQX-Ry-7A8"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pV8-vi-SWV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SVM-3m-kF8"/>
-                    <constraint firstItem="pV8-vi-SWV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bzG-67-wAc"/>
-                    <constraint firstAttribute="trailing" secondItem="pV8-vi-SWV" secondAttribute="trailing" id="iHK-Wi-sgN"/>
-                    <constraint firstAttribute="bottom" secondItem="pV8-vi-SWV" secondAttribute="bottom" id="lbF-0k-bbY"/>
+                    <constraint firstAttribute="bottom" secondItem="KE6-8f-VOs" secondAttribute="bottom" id="Fnw-r3-nC2"/>
+                    <constraint firstItem="KE6-8f-VOs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J1J-rj-eeU"/>
+                    <constraint firstAttribute="trailing" secondItem="KE6-8f-VOs" secondAttribute="trailing" id="VYZ-sa-O5i"/>
+                    <constraint firstItem="KE6-8f-VOs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dbb-aO-Rhe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

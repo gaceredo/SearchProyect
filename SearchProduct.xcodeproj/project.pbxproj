@@ -46,6 +46,9 @@
 		712CB14022061A5600654956 /* SearchProductViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */; };
 		7169B47D2206702E00491B3F /* ScrollImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169B47B2206702E00491B3F /* ScrollImageTableViewCell.swift */; };
 		7169B47E2206702E00491B3F /* ScrollImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7169B47C2206702E00491B3F /* ScrollImageTableViewCell.xib */; };
+		7169B4812206731A00491B3F /* DetailsSearchProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169B4802206731A00491B3F /* DetailsSearchProductViewModel.swift */; };
+		7169B48322067D6600491B3F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169B48222067D6600491B3F /* UIColor+Extension.swift */; };
+		7169B485220682D600491B3F /* DetailsSearchProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169B484220682D600491B3F /* DetailsSearchProductManager.swift */; };
 		7187974322053485003E5239 /* SellerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7187974222053485003E5239 /* SellerModel.swift */; };
 		71879745220534A5003E5239 /* InstallmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71879744220534A5003E5239 /* InstallmentsModel.swift */; };
 		71879747220534BC003E5239 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71879746220534BC003E5239 /* AddressModel.swift */; };
@@ -102,6 +105,9 @@
 		712CB13F22061A5600654956 /* SearchProductViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchProductViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		7169B47B2206702E00491B3F /* ScrollImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImageTableViewCell.swift; sourceTree = "<group>"; };
 		7169B47C2206702E00491B3F /* ScrollImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollImageTableViewCell.xib; sourceTree = "<group>"; };
+		7169B4802206731A00491B3F /* DetailsSearchProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSearchProductViewModel.swift; sourceTree = "<group>"; };
+		7169B48222067D6600491B3F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7169B484220682D600491B3F /* DetailsSearchProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSearchProductManager.swift; sourceTree = "<group>"; };
 		7187974222053485003E5239 /* SellerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerModel.swift; sourceTree = "<group>"; };
 		71879744220534A5003E5239 /* InstallmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentsModel.swift; sourceTree = "<group>"; };
 		71879746220534BC003E5239 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
@@ -344,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				7125105F22048D8A00341266 /* UIViewController+Extension.swift */,
+				7169B48222067D6600491B3F /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -376,6 +383,7 @@
 			children = (
 				7187974822053505003E5239 /* URL */,
 				718797492205353B003E5239 /* SearchProductManager.swift */,
+				7169B484220682D600491B3F /* DetailsSearchProductManager.swift */,
 			);
 			path = Resquest;
 			sourceTree = "<group>";
@@ -398,6 +406,7 @@
 		71257C7D2206577C00030669 /* DetailsSearchProductViewontroller */ = {
 			isa = PBXGroup;
 			children = (
+				7169B47F220672D300491B3F /* ViewModel */,
 				71257C7E220657C000030669 /* DetailsSearchProductViewontrollerViewController.swift */,
 				71257C7F220657C000030669 /* DetailsSearchProductViewontrollerViewController.xib */,
 			);
@@ -409,6 +418,14 @@
 			children = (
 				712CB13A220612D700654956 /* SearchProductViewModel.swift */,
 				712CB13D2206131E00654956 /* SearchProductViewModel+Delegate.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7169B47F220672D300491B3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7169B4802206731A00491B3F /* DetailsSearchProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -569,6 +586,7 @@
 				7187974C22053572003E5239 /* ProductsViewController+Services.swift in Sources */,
 				7125106022048D8A00341266 /* UIViewController+Extension.swift in Sources */,
 				712510532204809300341266 /* Localizable.swift in Sources */,
+				7169B48322067D6600491B3F /* UIColor+Extension.swift in Sources */,
 				7125103A2203BE4E00341266 /* UIView+Creation.swift in Sources */,
 				7125105A22048C4600341266 /* ProductsViewController.swift in Sources */,
 				7125103D2203BEB000341266 /* ReusableCell.swift in Sources */,
@@ -578,6 +596,7 @@
 				7125106C22049D3700341266 /* ProductViewController+ Transitions.swift in Sources */,
 				712CB14022061A5600654956 /* SearchProductViewController+SearchBar.swift in Sources */,
 				7125106E2204D84100341266 /* RestApi.swift in Sources */,
+				7169B485220682D600491B3F /* DetailsSearchProductManager.swift in Sources */,
 				7187974E2205366D003E5239 /* ReviewsModel.swift in Sources */,
 				71251065220494CA00341266 /* SearchProductViewController.swift in Sources */,
 				712CB13E2206131E00654956 /* SearchProductViewModel+Delegate.swift in Sources */,
@@ -597,6 +616,7 @@
 				7187974A2205353B003E5239 /* SearchProductManager.swift in Sources */,
 				712510572204853800341266 /* ResponseHandlingError.swift in Sources */,
 				712510732204DC8B00341266 /* RouterBase.swift in Sources */,
+				7169B4812206731A00491B3F /* DetailsSearchProductViewModel.swift in Sources */,
 				712510382203BE1E00341266 /* UITableView+Register.swift in Sources */,
 				7125104422047B2400341266 /* Network.swift in Sources */,
 				7125107E2205094900341266 /* Mappable.swift in Sources */,

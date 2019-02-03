@@ -12,6 +12,15 @@ import UIKit
 struct RouterURL {
     
     static func searchProduct() -> String {
-        return "search"
+        return "sites/MLU/search"
     }
+    
+    static func detailsSearchProduct(_ idProduct:String) -> String {
+        return "items/\(idProduct)"
+    }
+    
+    static func descriptionSearchProduct(_ idProduct:String) -> String {
+        return "items/\(idProduct)/description"
+    }
+    
 }

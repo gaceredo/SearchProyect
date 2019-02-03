@@ -12,7 +12,7 @@ class SearchProductManager {
     
     static let shared: SearchProductManager = SearchProductManager()
     
-    func getNewsFeedCategory(parameters:[String:String],
+    func getSearchProduct(parameters:[String:String],
                              success:@escaping (SearchProductModel) -> Void,
                              failure:@escaping (Error) -> Void) {
         RequestManager().request(target: .searchProduct(withParameters: parameters), requestHandlerCompletion: { ( response) in
@@ -25,5 +25,6 @@ class SearchProductManager {
             failure(error)
         }
     }
-    
 }
+
+

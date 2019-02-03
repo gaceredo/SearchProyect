@@ -11,7 +11,8 @@ import UIKit
 extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+         let index = results[indexPath.row]
+         self.delegate?.pushViewController(index.id)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,13 +41,5 @@ extension SearchProductViewModel: UITableViewDelegate, UITableViewDataSource {
         cell.setImage(urlImage: index.thumbnail!)
        
         return cell
-    }
-    
-    
-    func validateCurrenc(_ currencyId:String) -> String {
-        if currencyId == isDolar {
-            return "U$S"
-        }
-        return "$"
     }
 }
