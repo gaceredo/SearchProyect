@@ -21,25 +21,28 @@ class DetailsSearchProductViewModel: NSObject {
     var textDescription:String?
     var delegate:DetailsSearchProductDelegate?
     var isFirst = 0
+    
+    
     func callDetailsSearchProduct(_ id:String)  {
+        
         DetailsSearchProductManager.shared.getDetailsSearchProduct(IdProduct: id, success: { [weak self]  (success) in
             self?.result = success
             if let images = success.pictures{
                 self?.imageUrlArray = images
-                self?.delegate?.reloadTableView()
             }
-        }) { (error) in
-          //Error
+             self?.callDescriptionProduct(id)
+        }) { [weak self]  (error) in
+          self?.delegate?.response(isValid: false)
         }
     }
-    
     
     func callDescriptionProduct(_ id:String){
         DescriptionsSearchProductManager.shared.getDetailsSearchProduct(IdProduct: id, success: {[weak self] (success) in
             self?.textDescription = success.plainText
+            self?.delegate?.response(isValid: true)
             self?.delegate?.reloadTableView()
-        }) { (error) in
-            
+        }) {[weak self] (error) in
+            self?.delegate?.response(isValid: false)
         }
     }
     
@@ -75,6 +78,7 @@ class DetailsSearchProductViewModel: NSObject {
      
         return cell
     }
+    
     func cellDescription(_ tableView:UITableView,_ indexPath:IndexPath ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HeaderDescriptionTableViewCell.xibName, for: indexPath) as! HeaderDescriptionTableViewCell
         cell.descriptionProduct.text = textDescription

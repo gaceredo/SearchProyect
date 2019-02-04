@@ -45,12 +45,14 @@ class SearchProductViewController: UIViewController,SearchProductDelegate,EmptyR
     }
     
     func insertViewEmptySearch() {
+        if self.emptyResultSearch == nil {
             self.emptyResultSearch = EmptyResultSearch.loadFirstViewFromNib()
             if let emptyResultSearch = self.emptyResultSearch {
                 emptyResultSearch.delegate = self
                 self.view.addSubview(emptyResultSearch)
                 emptyResultSearch.insetsZeroToSuperview()
             }
+        }
     }
     
     func reloadTableView() {
@@ -59,15 +61,19 @@ class SearchProductViewController: UIViewController,SearchProductDelegate,EmptyR
     }
     
     func pushViewController(_ id: String?) {
-        
+        self.showHUD()
         let searchDetailsViewController: DetailsSearchProductViewontrollerViewController = DetailsSearchProductViewontrollerViewController.loadFromNib()
         searchDetailsViewController.idPrduct = id
         navigationController?.pushViewController(searchDetailsViewController, animated: true)
     }
     
     func reloadSearch() {
-        if let viewWithTag = self.view.viewWithTag(1) {
-            viewWithTag.removeFromSuperview()
+        
+        if let viewWithTag = self.view.viewWithTag(404) {
+            DispatchQueue.main.async {
+                viewWithTag.removeFromSuperview()
+                self.emptyResultSearch = nil
+            }
             self.searchBar.text = LocalizableStrings.Placeholders.emptyText.localized
             self.viewModel.results.removeAll()
             self.tableView.reloadData()

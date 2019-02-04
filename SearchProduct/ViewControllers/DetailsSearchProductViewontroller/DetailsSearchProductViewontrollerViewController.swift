@@ -39,7 +39,9 @@ class DetailsSearchProductViewontrollerViewController: UIViewController,DetailsS
     }
     
     func response(isValid: Bool) {
-        //validate response 
+        if isValid{
+            self.hideHUD()
+        }
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
