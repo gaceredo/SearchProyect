@@ -28,9 +28,9 @@ class SearchProductTableViewCell: UITableViewCell, ReusableCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        titleProduct.text = nil
-        imageProduct.image = nil
-        descriptionsProduct.text = nil
+        self.titleProduct.text = nil
+        self.imageProduct.image = nil
+        self.descriptionsProduct.text = nil
     }
     
 }
